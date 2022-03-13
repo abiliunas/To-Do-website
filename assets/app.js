@@ -1,3 +1,5 @@
 import './styles/app.scss';
 
-require('bootstrap')
+var $ = require('jquery');
+
+require('bootstrap');
