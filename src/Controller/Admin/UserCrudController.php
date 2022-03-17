@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CodeEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
@@ -24,12 +25,13 @@ class UserCrudController extends AbstractCrudController
         yield IdField::new('id')
             ->hideWhenCreating();
         yield EmailField::new('email');
-        //yield CodeEditorField::new('roles');
+        yield ArrayField::new('roles');
         yield TextField::new('password');
         yield TextField::new('firstname');
         yield TextField::new('lastname');
         yield ImageField::new('profile_picture_filename')
             ->setUploadDir('public/uploads/images/')
-            ->setUploadedFileNamePattern('[contenthash].[extension]');
+            ->setUploadedFileNamePattern('[contenthash].[extension]')
+            ->hideOnIndex();
     }
 }
