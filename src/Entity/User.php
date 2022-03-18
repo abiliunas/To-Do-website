@@ -24,8 +24,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
-    #[ORM\OneToOne(targetEntity: personalinformation::class, cascade: ['persist', 'remove'])]
-    private $personal_information;
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $first_name;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $last_name;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $profile_picture_filename;
 
     public function getId(): ?int
     {
@@ -97,14 +103,38 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getPersonalInformation(): ?personalinformation
+    public function getFirstName(): ?string
     {
-        return $this->personal_information;
+        return $this->first_name;
     }
 
-    public function setPersonalInformation(?personalinformation $personal_information): self
+    public function setFirstName(?string $first_name): self
     {
-        $this->personal_information = $personal_information;
+        $this->first_name = $first_name;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->last_name;
+    }
+
+    public function setLastName(?string $last_name): self
+    {
+        $this->last_name = $last_name;
+
+        return $this;
+    }
+
+    public function getProfilePictureFilename(): ?string
+    {
+        return $this->profile_picture_filename;
+    }
+
+    public function setProfilePictureFilename(?string $profile_picture_filename): self
+    {
+        $this->profile_picture_filename = $profile_picture_filename;
 
         return $this;
     }
