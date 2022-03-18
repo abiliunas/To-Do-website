@@ -15,4 +15,11 @@ class MainController extends AbstractController
     {
         return $this->render('main/index.html.twig');
     }
+    /**
+     * @Route("/todo", name="todo")
+     */
+    public function todo(): Response
+    {
+        return $this->render('main/list.html.twig');
+    }
 }
