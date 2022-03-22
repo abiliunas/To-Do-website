@@ -1,79 +1,105 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-1 bg-black text-light vh-100">
-            <div class="row ">
+        <div class="col-1 lightblack lightgrey vh-100">
+            <div class="row p-2 mt-3 mb-3">
                 <div class="col">
-                pic
+                    <i class="fa fa-solid fa-user fa-lg"></i>
                 </div>
-                <div class="col mb-3">
-                PFP
+                <div class="col text-center">
+                    Account name
                 </div>
             </div>
-            <div class="row ">
+            <div class="row">
                 <hr>
             </div>
-            <div class="row ">
+            <div class="row p-2">
                 <div class="col">
-                pic
+                    <i class="fa fa-solid fa-list fa-lg"></i>
                 </div>
-                <div class="col">
+                <div class="col text-center me-2">
                     Lists
                 </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <i class="fa fa-solid fa-tags fa-lg"></i>
+                </div>
+                <div class="col text-center me-2">
+                    Tags
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <i class="fa fa-solid fa-check fa-lg"></i>
+                </div>
+                <div class="col text-center">
+                    <i class="no-italics sidebar-text-size">Completed</i>
+                </div>
                 
             </div>
-            <div class="row ">
+            <div class="row p-2">
                 <div class="col">
-                pic
+                    <i class="fa fa-solid fa-calendar fa-lg"></i>
                 </div>
-                <div class="col">
-                Tags
-                </div>
-                
-            </div>
-            <div class="row ">
-                <div class="col">
-                pic
-                </div>
-                <div class="col">
-                Completed
-                </div>
-                
-            </div>
-            <div class="row ">
-                <div class="col">
-                pic
-                </div>
-                <div class="col">
+                <div class="col text-center">
                 Calendar view
                 </div>
                 
             </div>
         </div>
-        <div class="col-8 bg-danger text-black vh-100">
-            <div class="card">
-                <div class="card-body">
-                    This is some text within a card body.
-                 </div>
+        <div class="col-8 darkerblack text-white vh-100">
+            <div class="row p-3">
+                <div class="col-1 center-container text-warning">
+                    <i class="fa fa-solid fa-circle fa-lg"></i>
+                </div>
+                <div class="col">
+                    <h1>List name</h1>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    This is some text within a card body.
-                 </div>
+            <div class="row me-2 ms-2">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa fa-thin fa-plus"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Add task, press enter to save" aria-label="task-input" aria-describedby="basic-addon1">
+                </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    This is some text within a card body.
-                 </div>
+            <div class="row me-2 ms-2">
+                <hr>
+            </div>
+            <div class="row me-2 ms-2">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex border-0 mb-2 rounded text-light" style="background-color: #2c2c2c;">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+                        <s>Cras justo odio</s>
+                    </li>
+                    <li class="list-group-item d-flex border-0 mb-2 rounded text-light" style="background-color: #2C2C2CFF;">
+                            <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+                            <s>Dapibus ac facilisis in</s>
+                            <span class="badge rounded-pill bg-danger ms-2 me-2">Tag</span>
+                            <i class="no-italics text-info">Mar 24</i>
+                    </li>
+                    <li class="list-group-item d-flex border-0 mb-2 rounded text-light" style="background-color: #2C2C2CFF;">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        Morbi leo risus
+                    </li>
+                    <li class="list-group-item d-flex border-0 mb-2 rounded text-light" style="background-color: #2C2C2CFF;">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        Porta ac consectetur ac
+                    </li>
+                    <li class="list-group-item d-flex border-0 mb-0 rounded text-light" style="background-color: #2C2C2CFF;">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        Vestibulum at eros
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-3 bg-info text-black vh-100">
-        
-        </div>
+        <div class="col-3 lightblack text-white vh-100"> </div>
     </div>
 </div>
-      
 
 {% endblock %}

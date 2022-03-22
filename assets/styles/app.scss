@@ -1,8 +1,38 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-.lightblack{
+.lightblack {
     background-color:rgb(48, 48, 48)
 }
-.darkerblack{
+.darkerblack {
     background-color: rgb(34, 34, 34)
+}
+
+.lightgrey {
+    color: rgb(176, 176, 176);
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+.no-italics {
+    font-style: normal;
+}
+
+.sidebar-text-size {
+    font-size: 15px;
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-float {
+    float: right;
 }
